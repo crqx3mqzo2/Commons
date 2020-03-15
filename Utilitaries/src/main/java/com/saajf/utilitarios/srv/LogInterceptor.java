@@ -37,7 +37,7 @@ public class LogInterceptor implements HandlerInterceptor {
 			mensaje += ip + ", " + "\"idUsuario:" + idUsuario + " \"metodo:" + metodo + " \"urlPath:" + urlPath
 					+ " \"url:" + url + "}";
 			logger.info(mensaje);
-			// kafkaTemplate.send(topic, mensaje);
+			 //kafkaTemplate.send(topic, mensaje);
 
 		} catch (Exception e) {
 			logger.error("Se Produjo el siguiente error: " + e.getMessage());

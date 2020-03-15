@@ -10,20 +10,19 @@
 
 	<packaging>jar</packaging>
 
-	<name>utilitarios</name>
-	<description>Proyecto de la compañía SaaJF - realizado en Spring Boot. Utilitarios. Jar generico con utilidades comunes de todos los proyectos SaaJF Java</description>
-
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.8.RELEASE</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<version>2.2.4.RELEASE</version>
 	</parent>
+
+	<name>utilitarios</name>
+	<description>Proyecto de la compañía SaaJF - realizado en Spring Boot. Utilitarios. Jar generico con utilidades comunes de todos los proyectos SaaJF Java</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
+		<java.version>11</java.version>
 	</properties>
 
 	<dependencies>
@@ -33,8 +32,19 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
+
+		<dependency>
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
 		</dependency>
 
 		<dependency>

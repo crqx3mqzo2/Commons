@@ -1,7 +1,6 @@
 package com.saajf.utilitarios.gener;
 
 import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,7 +9,6 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -81,7 +79,7 @@ public class FileUtil {
 	 * Outputstream.
 	 *
 	 * @param pathFile the path file
-	 * @param arg the arg
+	 * @param arg      the arg
 	 * @throws CustomRuntimeException the custom runtime exception
 	 */
 	public static void outputstream(String pathFile, byte[] arg) throws CustomRuntimeException {
@@ -112,10 +110,10 @@ public class FileUtil {
 	 * Guardar anexo en ruta temporal del server.
 	 *
 	 * @param binario the binario
-	 * @param fila the fila
+	 * @param fila    the fila
 	 * @return the file
 	 */
-	public static File guardarAnexoEnRutaTemporalDelServer(MultipartFile binario, File fila) {
+	public static File temporalFileSaveServer(MultipartFile binario, File fila) {
 		try {
 			byte[] arregloByte = binario.getBytes();
 			OutputStream outFile = new FileOutputStream(fila);
@@ -131,10 +129,10 @@ public class FileUtil {
 	 * Guardar anexo en ruta temporal del server.
 	 *
 	 * @param binario the binario
-	 * @param fila the fila
+	 * @param fila    the fila
 	 * @return the file
 	 */
-	public static File guardarAnexoEnRutaTemporalDelServer(byte[] binario, File fila) {
+	public static File temporalFileSaveServer(byte[] binario, File fila) {
 		try {
 			byte[] arregloByte = binario;
 			OutputStream outFile = new FileOutputStream(fila);
@@ -157,7 +155,6 @@ public class FileUtil {
 		try {
 			java.lang.Runtime.getRuntime().exec("rm -f " + f.getAbsolutePath());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -181,6 +178,7 @@ public class FileUtil {
 	 * modo ejecuta el comando mas adecuado
 	 *
 	 * @param pathFile the path file
+	 * @deprecated
 	 */
 	public static void deleteFile(String pathFile) {
 		String OS = System.getProperty("os.name").toLowerCase();
@@ -229,7 +227,7 @@ public class FileUtil {
 	 * Buffer reader.
 	 *
 	 * @param nameFile the name file
-	 * @param charset the charset
+	 * @param charset  the charset
 	 * @return the buffered reader
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
